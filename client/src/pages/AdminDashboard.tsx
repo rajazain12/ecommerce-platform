@@ -33,8 +33,8 @@ function AdminDashboard() {
                             key={t.key}
                             onClick={() => setTab(t.key)}
                             className={`px-6 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 ${tab === t.key
-                                    ? 'bg-ink text-white shadow-md'
-                                    : 'bg-transparent text-stone hover:bg-stone/10 hover:text-ink'
+                                ? 'bg-ink text-white shadow-md'
+                                : 'bg-transparent text-stone hover:bg-stone/10 hover:text-ink'
                                 }`}
                         >
                             {t.label}
@@ -123,7 +123,7 @@ function ProductsTab() {
             <form onSubmit={handleCreate} className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-12">
                 <input placeholder="Product Name" value={name} onChange={(e) => setName(e.target.value)} className={inputClass} required />
                 <input placeholder="Price (USD)" type="number" step="0.01" value={price} onChange={(e) => setPrice(e.target.value)} className={inputClass} required />
-                <input placeholder="Image URL (e.g. https://...)" value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} className={`${inputClass} md:col-span-2`} required />
+                <input placeholder="Image URL (e.g. http://localhost:5173/img/yourpicturename.jpg)" value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} className={`${inputClass} md:col-span-2`} required />
                 <input placeholder="Stock Quantity" type="number" value={stock} onChange={(e) => setStock(e.target.value)} className={inputClass} required />
                 <select value={categoryId} onChange={(e) => setCategoryId(e.target.value)} className={inputClass}>
                     <option value="">Select a category (optional)</option>
